@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func oldMain() {
 	var x float64 = 20.0
 	fmt.Println(x)
 	fmt.Printf("x is of type %T\n", x)
@@ -32,4 +32,24 @@ func main() {
 	num1, num2 := 20, 30          //int variables
 	amount, name = 49.99, "Bappy" // float and string variables
 	fmt.Println(num1, num2, amount, name)
+
+	var_1, var_2 := 1, "hi" //declare var_1 int and var_2 string
+	fmt.Println(var_1, var_2)
+	var_3, var_2 := 2, "hello" //var_3 is declared, but var_2 is just reassigned
+	fmt.Println(var_3, var_2)
+}
+
+// Declaring Global variable
+var scalar string = "Welcome to scalar"
+
+func main() {
+	// Printing Global variable in main
+	fmt.Println(scalar + " from main")
+	//function call
+	displayGreeting()
+}
+
+func displayGreeting() {
+	// Printing Global variable from a random function
+	fmt.Println(scalar + " from function")
 }
