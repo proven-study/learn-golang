@@ -47,6 +47,11 @@ func main() {
 	fmt.Println(scalar + " from main")
 	//function call
 	displayGreeting()
+
+	const myConst = 10
+	fmt.Println(myConst)
+	// cannot assign a new value to a constant
+	// myConst = 20 // this will cause a compile-time error
 }
 
 func displayGreeting() {
